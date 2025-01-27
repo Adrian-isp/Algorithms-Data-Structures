@@ -3,7 +3,7 @@
 void bubble_sort(int array[], int size){
 
     int ok;
-    //use a loop that runs as long as elements have still been swapped
+    //use a loop that runs as long as elements are still being swapped
     do{
         ok = 1;
         //go through all elements for every loop
