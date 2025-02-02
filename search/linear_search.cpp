@@ -34,7 +34,13 @@ int main() {
     int item = array[rand() % size];
     std::cout << "The searched item is: " << item << '\n';
 
-    
+    for(int i = 0; i<size; i++) {
+        if(array[i] == item) {
+            std::cout << "Item found!";
+            break;
+        }
+        displayArray(array, i, size);
+    }
 
     return 0;
 }
