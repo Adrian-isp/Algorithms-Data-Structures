@@ -3,7 +3,7 @@
 #include <chrono>
 #include <thread>
 
-//function to randomise element values and size of an array"
+// function to randomise element values and size of an array"
 void makeRandomArray(int arr[], int &size) {
     srand(0);
 
@@ -14,8 +14,8 @@ void makeRandomArray(int arr[], int &size) {
     }
 }
 
-//to display elements between indexes with a delay:
-void displayArray(int arr[], int start, int end){
+// to display elements between indexes with a delay:
+void displayArray(int arr[], int start, int end) {
     for(int i = start; i < end; i++){
         std::cout << arr[i] << " ";
     }
@@ -24,12 +24,16 @@ void displayArray(int arr[], int start, int end){
     std::this_thread::sleep_for(std::chrono::milliseconds(300));
 }
 
-int main(){
+int main() {
+    // array:
     int array[20];
     int size;
     makeRandomArray(array, size);
 
+    // searched item:
+    int item = array[rand() % size];
 
+    
 
     return 0;
 }
