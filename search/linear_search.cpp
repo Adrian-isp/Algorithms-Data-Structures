@@ -21,7 +21,7 @@ void displayArray(int arr[], int start, int end) {
     }
     std::cout << '\n';
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(300));
+    std::this_thread::sleep_for(std::chrono::milliseconds(400));
 }
 
 int main() {
@@ -32,6 +32,7 @@ int main() {
 
     // searched item:
     int item = array[rand() % size];
+    std::cout << "The searched item is: " << item << '\n';
 
     
 
