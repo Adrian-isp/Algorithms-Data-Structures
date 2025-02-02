@@ -12,7 +12,7 @@ void makeRandomArray(int arr[], int &size) {
     }
 }
 void displayArray(int arr[], int start, int end){
-    for(int i = start; i <= end; i++){
+    for(int i = start; i < end; i++){
         std::cout << arr[i] << " ";
     }
     std::cout << '\n';
