@@ -1,46 +1,36 @@
 #include <iostream>
+#include <chrono>
+#include <thread>
 
-void bubble_sort(int array[], int size){
+void makeRandomArray(int arr[], int &size) {
+    srand(time(0));
 
-    int ok;
-    //use a loop that runs as long as elements are still being swapped
-    do{
-        ok = 1;
-        //go through all elements for every loop
-        for(int i = 0; i < size-1; i++){
-            //check if the elements are in DESCENDING order:
-            if(array[i] > array[i+1]){
-                //if so, swap variables using a temporary variable:
-                int temp = array[i];
-                array[i] = array[i+1];
-                array[i+1] = temp;
+    size = 10 + rand() % 10;
 
-                //change the ok variable accordingly
-                ok = 0;
-            }
-        }
-        
-    }while(ok == 0);
+    for(int i = 0; i < size; i++){
+        arr[i] = rand() % 100;
+    }
+}
+
+// to display elements in an array:
+void displayArray(int arr[], int size) {
+    for(int i = 0; i < size; i++){
+        std::cout << arr[i] << " ";
+    }
+    std::cout << '\n';
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 }
 
 int main(){
-    int n;
-    int v[100];
+    int size;
+    int array[100];
 
-    std::cout << "Type the amount of numbers in the array: ";
-    std::cin >> n;
+    makeRandomArray(array, size);
+    displayArray(array, size);
 
-    std::cout << "Type "<< n << " numbers: ";
-
-    for(int i = 0; i<n; i++){
-        std::cin >> v[i];
-    }
-
-    bubble_sort(v, n);
-
-    for(int i = 0; i<n; i++){
-        std::cout << v[i] << " ";
-    }
+    
+    
 
     return 0;
 }
