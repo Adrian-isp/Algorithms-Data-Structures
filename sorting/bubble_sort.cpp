@@ -2,6 +2,7 @@
 #include <chrono>
 #include <thread>
 
+// make a random intager array
 void makeRandomArray(int arr[], int &size) {
     srand(time(0));
 
@@ -30,7 +31,7 @@ int main(){
     displayArray(array, size);
 
     
-    
+
 
     return 0;
 }
