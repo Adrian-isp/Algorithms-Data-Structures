@@ -13,3 +13,8 @@ Created on the 3rd of March 2025.
 #### Search:
 - Binary Search (iterative) -March 3rd
 - Linear search -March 3rd
+
+## Data Structures:
+
+Arrays:
+- Static arrays -March 3rd
