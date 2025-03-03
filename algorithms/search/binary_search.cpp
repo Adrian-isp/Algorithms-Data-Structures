@@ -3,6 +3,7 @@
 
 // Binary search algorithm 
 // + max time compexity: O(log n) - logarithmic time (very efficient)
+// + space complexity: O(1) - Constant space complexity (because it's iterative)
 // - requires a sorted array
 
 // make a basic sorted array:
