@@ -3,7 +3,7 @@
 
 // Linear search algorithm 
 // - max time compexity: O(n) - linear time
-// - works for any array, sorted or unsorted
+// + works for any array, sorted or unsorted
 
 // function to randomise and display a basic array:
 void makeRandomArray(int arr[], int &size) {
