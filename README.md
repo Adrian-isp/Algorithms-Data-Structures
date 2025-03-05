@@ -18,3 +18,4 @@ Created on the 3rd of March 2025.
 
 Arrays:
 - Static arrays -March 3rd
+- Vectors (C++) -March 5th
