@@ -16,6 +16,9 @@ Created on the 3rd of March 2025.
 
 ## Data Structures:
 
+Stacks:
+- Stack array implementation -March 6th
+
 Arrays:
 - Static arrays -March 3rd
 - Vectors (C++) -March 5th
