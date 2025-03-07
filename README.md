@@ -16,6 +16,11 @@ Created on the 3rd of March 2025.
 
 ## Data Structures:
 
+Queues:
+- `Queue (C++)` - Mar-07
+- `Priority Queue (C++)` - Mar-07
+
+
 Stacks:
 - `Stack - array implementation` - Mar-06
 - `Stacks (C++)` - Mar-07
