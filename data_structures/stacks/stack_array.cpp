@@ -11,6 +11,8 @@
 // for example: undo/redo functionality on apps
 // Depth first search, parsing, backtracking
 
+// push/pop time complexity: O(1) constant time
+
 class Stack {
     int arr[50];
 public:

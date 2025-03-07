@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stack>
 
+// c++ standard template library stack
+
 int main() {
     std::stack<int> stack;
 
