@@ -11,14 +11,15 @@ Created on the 3rd of March 2025.
 ## Algorithms:
 
 #### Search:
-- Binary Search (iterative) -March 3rd
-- Linear search -March 3rd
+- `Binary Search (iterative)` - Mar-03
+- `Linear search` - Mar-03
 
 ## Data Structures:
 
 Stacks:
-- Stack array implementation -March 6th
+- `Stack - array implementation` - Mar-06
+- `Stacks (C++)` - Mar-07
 
 Arrays:
-- Static arrays -March 3rd
-- Vectors (C++) -March 5th
+- `Static arrays` - Mar-03
+- `Vectors (C++)` - Mar-05
