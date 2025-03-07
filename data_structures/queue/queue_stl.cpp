@@ -20,7 +20,7 @@ int main(){
     std::cout << "First element in queue: "
               << queue.front() << '\n';
     std::cout << "Last element in the queue: "
-              << queue.back() << '\n\n';
+              << queue.back() << "\n\n";
 
     std::cout << "Queue elements:\n";
     // go through queue by popping

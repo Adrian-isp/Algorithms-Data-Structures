@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-// stack manual implementation in C++ using an array
+// stack implementation in C++ using an array
 // for learning purposes
 
 // stacks are LIFO - 'last in first out' data structures
