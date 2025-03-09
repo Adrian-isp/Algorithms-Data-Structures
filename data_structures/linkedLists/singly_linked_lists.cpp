@@ -62,30 +62,77 @@ public:
         tail->next = nullptr;
     }
 
+    int getTail() {
+        return tail->data;
+    }
+
     void display() {
+        if(head == nullptr){
+            std::cout << "The list is empty\n\n";
+            return;
+        }
         std::cout << "Current list [<data>|<nextAddress>]:\n";
-
+        
         temp = head;
-
         while(temp->next != nullptr) {
-            std::cout << "[" <<temp->data 
+            std::cout << "\033[38;2;10;10;10m" 
+                      << "[" <<temp->data 
                       << "|" <<temp->next
-                      << "] -> ";
+                      << "] -> \033[0m";
             temp = temp->next;
         }
-        std::cout << "[" <<temp->data 
+        std::cout << "\033[38;2;10;10;10m"
+                  << "[" <<temp->data 
                   << "|" <<temp->next
-                  << "]\n";
+                  << "]\033[0m\n\n";
     }
 };
 
 int main() {
     LinkedList list;
 
-    list.push(2020);
-    list.push(2021);
+    bool running = true;
 
-    list.display();
+    while (running) {
+        
+        char response;
+        int value;
+
+        std::cout << "\033[1m"
+                  << "what would like to do?\n"
+                  << "\033[0m\033[38;2;255;255;0m"
+                  << "'a' to append to list\n"
+                  << "'p' to pop from list\n"
+                  << "'x' to exit"
+                  << "\033[0m\n\n";
+        std::cin >> response;
+
+        switch (response) {
+        case 'a':
+            std::cout << "Enter a value to append:\n";
+            std::cin >> value;
+            list.push(value);
+            std::cout << "\n";
+            break;
+        case 'p':
+            std::cout << "\033[1m"
+                      << list.getTail()
+                      << " has been popped from the list"
+                      << "\033[0m\n\n";
+            list.pop();
+            break;
+        case 'x':
+            running = false;
+            break;
+        default:
+            std::cout << "Invalid input! Try again!\n";
+            break;
+        }
+
+        list.display();
+    }
+
+    std::cout << "Thank you for your attention!";
 
     return 0;
 }
