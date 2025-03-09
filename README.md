@@ -16,15 +16,17 @@ Created on the 3rd of March 2025.
 
 ## Data Structures:
 
-Queues:
+#### Linked lists:
+- `Singly linked list implementation` - Mar-09
+
+#### Queues:
 - `Queue (C++)` - Mar-07
 - `Priority Queue (C++)` - Mar-07
 
-
-Stacks:
+#### Stacks:
 - `Stack - array implementation` - Mar-06
 - `Stacks (C++)` - Mar-07
 
-Arrays:
+#### Arrays:
 - `Static arrays` - Mar-03
 - `Vectors (C++)` - Mar-05
