@@ -18,11 +18,11 @@ struct Node {
 class LinkedList {
     int length = 0;
     // head pointer for the first item
-    Node* head;
+    Node* head = nullptr;
     // tail pointer for the last one
-    Node* tail;
-    // temporary pointer for appending
-    Node* temp;
+    Node* tail = nullptr;
+    // temporary pointer for manipulation
+    Node* temp = nullptr;
 public:
     void push(int newItem) {
         // when a new list is created:
@@ -30,6 +30,8 @@ public:
             // create the head
             head = new Node;
             head->data = newItem;
+            head->next = nullptr;
+
             temp = head;
             tail = head;
         }
@@ -37,18 +39,53 @@ public:
         else {
             // use a temporary pointer
             // to link the last node
-            temp = new Node;
-            temp->data = newItem;
+            tail = new Node;
+            tail->data = newItem;
+            tail->next = nullptr;
         
-            tail->next = temp;
-            tail = temp;
+            temp->next = tail;
+            temp = tail;
         }
         length++;
+    }
+
+    void pop() {
+        temp = tail;
+        // move the tail to the penultimate node
+        tail = head;
+        while(tail->next != temp) {
+            tail = tail->next;
+        }
+        // delete the last value
+        delete temp;
+        // dereference the pointer
+        tail->next = nullptr;
+    }
+
+    void display() {
+        std::cout << "Current list [<data>|<nextAddress>]:\n";
+
+        temp = head;
+
+        while(temp->next != nullptr) {
+            std::cout << "[" <<temp->data 
+                      << "|" <<temp->next
+                      << "] -> ";
+            temp = temp->next;
+        }
+        std::cout << "[" <<temp->data 
+                  << "|" <<temp->next
+                  << "]\n";
     }
 };
 
 int main() {
+    LinkedList list;
 
+    list.push(2020);
+    list.push(2021);
+
+    list.display();
 
     return 0;
 }
