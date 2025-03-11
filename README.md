@@ -16,8 +16,12 @@ Created on the 3rd of March 2025.
 
 ## Data Structures:
 
+#### Hash maps:
+- `Unordered Set (C++)` - Mar-11
+
 #### Linked lists:
 - `Singly linked list implementation` - Mar-09
+- `List (C++ doubly linked list)` - Mar-11
 
 #### Queues:
 - `Queue (C++)` - Mar-07
