@@ -4,6 +4,7 @@
 // C++ STL unordered set
 // uses a hash function and stores
 // unordered data with fast access time
+// as well as insert time
 
 int main() {
     std::unordered_set<int> set;
@@ -22,6 +23,19 @@ int main() {
 
     if(set.empty())
         std::cout << "Set now empty.\n";    
+
+    // insert time:
+    // O(1) - amortized constant time
+    set.emplace(12);
+    set.emplace(1);
+    set.emplace(765);
+    set.emplace(512);
+
+    // using an iterator to traverse a set
+    for(std::unordered_set<int>::iterator it = set.begin();
+        it != set.end(); it++) {
+            std::cout << *it << ' ';
+    }
 
     return 0;
 }

@@ -17,6 +17,7 @@ Created on the 3rd of March 2025.
 ## Data Structures:
 
 #### Hash maps:
+- `Unordered Map (C++)` - Mar-12
 - `Unordered Set (C++)` - Mar-11
 
 #### Linked lists:
