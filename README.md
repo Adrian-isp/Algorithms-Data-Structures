@@ -10,6 +10,10 @@ Created on the 3rd of March 2025.
 
 ## Algorithms:
 
+#### Sorting:
+- `Selection Sort` - Mar-13
+- `Bubble Sort` - Mar-13
+
 #### Search:
 - `Binary Search (iterative)` - Mar-03
 - `Linear search` - Mar-03
