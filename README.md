@@ -11,6 +11,7 @@ Created on the 3rd of March 2025.
 ## Algorithms:
 
 #### Sorting:
+- `Insertion Sort` - Mar-13
 - `Selection Sort` - Mar-13
 - `Bubble Sort` - Mar-13
 
