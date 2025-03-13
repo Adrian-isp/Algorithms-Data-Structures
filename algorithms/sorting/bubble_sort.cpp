@@ -1,49 +1,50 @@
 #include <iostream>
-#include <chrono>
-#include <thread>
+#include <vector>
 
-// make a random intager array
-void makeRandomArray(int arr[], int &size) {
-    srand(time(0));
+// Bubble Sort Algorithm, slightly optimised
 
-    size = 10 + rand() % 10;
+// Worst case time complexity: O(n^2) / O(n + n-1 + ... +1) Quadratic time
+// Best case time complexity: O(n) - comparisons, O(1) swaps
+// Max space complexity: O(n) - total, O(1) - auxiliary
 
-    for(int i = 0; i < size; i++){
-        arr[i] = rand() % 100;
-    }
-}
+// + easy to implement and understand
+// + memory efficient
+// - suboptimal time complexity
 
-// to display elements in an array:
-void displayArray(int arr[], int size) {
-    for(int i = 0; i < size; i++){
-        std::cout << arr[i] << " ";
-    }
-    std::cout << '\n';
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
-}
-
-int main(){
-    int size;
-    int array[100];
-
-    makeRandomArray(array, size);
-    displayArray(array, size);
-
-    int swapped;
-    do{
+void bubbleSort(std::vector<int> &arr) {
+    int n = arr.size();
+    bool swapped;
+    do {
         swapped = false;
-        for(int i = 0; i < size - 1; i++){
-            if(array[i] > array[i+1]){
-                int temp = array[i];
-                array[i] = array[i+1];
-                array[i+1] = temp;
+        for(int i = 1; i < n; ++i) {
+            if(arr.at(i-1) > arr.at(i)) {
+                int temp = arr.at(i);
+                arr.at(i) = arr.at(i-1);
+                arr.at(i-1) = temp;
 
                 swapped = true;
             }
         }
-        displayArray(array, size);
+        n--;
     }while(swapped);
+}
+
+int main(){
+    int item = 0;
+    std::vector<int> array;
+
+    std::cout << "Enter all the items in your array (0 to stop): ";
+    
+    std::cin >> item;
+    while(item != 0) {
+        array.push_back(item);
+        std::cin >> item;
+    }
+    bubbleSort(array);
+
+    for(int i = 0; i<array.size(); i++) {
+        std::cout << array.at(i) << ' ';
+    }
 
     return 0;
 }
