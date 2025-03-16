@@ -4,16 +4,18 @@ Repository for important programming data structures and algorithms
 Created on the 3rd of March 2025.
 
 #### Important concepts:
-- Big O notation
+- "Big O" notation
 - time complexity
 - space complexity (memory)
 
 ## Algorithms:
 
 #### Sorting:
+- `Merge Sort` - Mar-16
 - `Insertion Sort` - Mar-13
 - `Selection Sort` - Mar-13
 - `Bubble Sort` - Mar-13
+
 
 #### Search:
 - `Binary Search (iterative)` - Mar-03
