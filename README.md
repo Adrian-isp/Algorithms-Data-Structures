@@ -28,6 +28,7 @@ Created on the 3rd of March 2025.
 - `Unordered Set (C++)` - Mar-11
 
 #### Linked lists:
+- `Doubly linked list implementation` - Mar-17
 - `Singly linked list implementation` - Mar-09
 - `List (C++ doubly linked list)` - Mar-11
 

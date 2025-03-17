@@ -3,22 +3,41 @@
 
 // Doubly linked list in C
 
+// implemented:
+// list nodes
+// pushBack() - appending
+// traverse() - print all items
+
+
 typedef struct Node {
     int val;
     struct Node* next; 
     struct Node* prev; 
 } Node;
 
-void pushBack(Node* tail, int value) {
+void pushBack(Node** tail, int value) {
     // allocate memory for the new node
-    tail->next = (Node*) malloc(sizeof(Node));
-    tail->next->prev = tail;
+    Node *nextNode = (Node*) malloc(sizeof(Node));
 
-    // move the tail forwards
-    tail = tail->next;
-    tail->next = NULL;
+    nextNode->val = value;
+    nextNode->next = NULL;
+    nextNode->prev = *tail;
 
-    tail->val = value;
+    (*tail)->next = nextNode;
+
+    // update tail pointer
+    *tail = nextNode;
+}
+
+void traverse(Node* head) {
+    // print the first item(for formatting)
+    printf("%d", head->val);
+    head = head->next;
+
+    while(head != NULL) {
+        printf(" - %d", head->val);
+        head = head->next;
+    }
 }
 
 int main() {
@@ -35,10 +54,14 @@ int main() {
 
     printf("Doubly linked list implementation in C!\n");
 
-    pushBack(tail, 12);
-    pushBack(tail, 256);
+    // pass the reference using pointers to pointers (C-style)
+    // append elements to linked list
+    pushBack(&tail, 12);
+    pushBack(&tail, 256);
+    pushBack(&tail, 7);
 
-
+    // go through the linked list from head to tail and print
+    traverse(head);
 
     return 9;
 }
