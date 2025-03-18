@@ -6,18 +6,18 @@
 // implemented:
 // list nodes
 // pushBack() - appending
+// popBack() - removing from end
 // traverse() - print all items
-
 
 typedef struct Node {
     int val;
-    struct Node* next; 
-    struct Node* prev; 
+    struct Node *next;
+    struct Node *prev;
 } Node;
 
-void pushBack(Node** tail, int value) {
+void pushBack(Node **tail, int value) {
     // allocate memory for the new node
-    Node *nextNode = (Node*) malloc(sizeof(Node));
+    Node *nextNode = (Node *)malloc(sizeof(Node));
 
     nextNode->val = value;
     nextNode->next = NULL;
@@ -29,12 +29,18 @@ void pushBack(Node** tail, int value) {
     *tail = nextNode;
 }
 
-void traverse(Node* head) {
+void popBack(Node **tail) {
+    *tail = (*tail)->prev;
+    free((*tail)->next);
+    (*tail)->next = NULL;
+}
+
+void traverse(Node *head) {
     // print the first item(for formatting)
     printf("%d", head->val);
     head = head->next;
 
-    while(head != NULL) {
+    while (head != NULL) {
         printf(" - %d", head->val);
         head = head->next;
     }
@@ -42,9 +48,9 @@ void traverse(Node* head) {
 
 int main() {
     // create a pointer to the head of the list
-    Node* head = NULL;
-    Node* tail = NULL;
-    head = (Node*) malloc(sizeof(Node));
+    Node *head = NULL;
+    Node *tail = NULL;
+    head = (Node *)malloc(sizeof(Node));
 
     head->val = 1;
     head->next = NULL;
@@ -58,7 +64,10 @@ int main() {
     // append elements to linked list
     pushBack(&tail, 12);
     pushBack(&tail, 256);
+    pushBack(&tail, 1024);
     pushBack(&tail, 7);
+
+    popBack(&tail);
 
     // go through the linked list from head to tail and print
     traverse(head);
