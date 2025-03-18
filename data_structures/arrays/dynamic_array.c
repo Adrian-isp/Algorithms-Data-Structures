@@ -13,6 +13,13 @@ typedef struct DynArray {
     int capacity;
 }DynArray;
 
+// initialise the array
+void arrayInit(DynArray *arr) {
+    arr->capacity = 4;
+    arr->size = 0;
+    arr->array = (int*)malloc(4*sizeof(int));
+}
+
 // append elements to dynamic array
 void pushBack(DynArray *arr, int value) {
     int size = arr->size;
@@ -36,7 +43,7 @@ void pushBack(DynArray *arr, int value) {
         arr->array = newarr;
 
         arr->array[size] = value;
-        size++;
+        arr->size++;
     }
 }
 
@@ -49,15 +56,17 @@ void tarverse(DynArray arr) {
 
 int main() {
     DynArray arr;
-    arr.capacity = 4;
-    arr.size = 0;
+    arrayInit(&arr);
 
+    // add five values
     pushBack(&arr, 7);
     pushBack(&arr, 2025);
     pushBack(&arr, 10);
     pushBack(&arr, 10);
+    // the fifth item triggers a resize
     pushBack(&arr, 10);
 
+    // display the array using traverse
     tarverse(arr);
 
     return 0;

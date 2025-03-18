@@ -48,5 +48,6 @@ Created on the 3rd of March 2025.
 
 #### Arrays:
 
+- `Dynamic array implementation` - Mar-19
 - `Static arrays` - Mar-03
 - `Vectors (C++)` - Mar-05
