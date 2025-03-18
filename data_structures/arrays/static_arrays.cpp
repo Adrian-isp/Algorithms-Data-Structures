@@ -1,12 +1,12 @@
 #include <iostream>
 
-// STATIC ARRAYS
+// Static arrays
 
 // Arrays are CONTIGUOUS data structures
 // they point to a block of data in memory
 
 int main() {
-    int array[10] = {1,2,3,4,5,6,7,8};
+    int array[10] = {1, 2, 3, 4, 5, 6, 7, 8};
 
     // accessing (indexing):
     // accesing an array is done by incrementing
