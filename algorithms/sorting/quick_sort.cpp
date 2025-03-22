@@ -5,6 +5,17 @@
 
 // It works by recursively setting a pivot,
 // moving all smaller elements to its left
+// and leaving oll larger elements to its right
+
+// worst case time complexity: O(n^2) if already sorted (rare)
+// Average time complexity: O(n log n)
+// Best case time complexity: O(n log n)
+
+// Space complexity = O(log n) due to recursion
+
+// + runtime efficiency
+// + space efficiency
+// - inefficient when almost already sorted
 
 void quickSort(std::vector<int> &arr, int start, int end);
 int partition(std::vector<int> &arr, int start, int end);
