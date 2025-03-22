@@ -13,6 +13,7 @@ Created on the 3rd of March 2025.
 
 #### Sorting:
 
+- `Quick sort` - Mar-22
 - `Merge Sort` - Mar-16
 - `Insertion Sort` - Mar-13
 - `Selection Sort` - Mar-13

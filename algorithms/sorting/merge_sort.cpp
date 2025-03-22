@@ -29,7 +29,7 @@ int main() {
         array.push_back(item);
         std::cin >> item;
     }
-    // selection sort algorithm
+    // merge sort algorithm
     mergeSort(array);
 
     // print the array items
