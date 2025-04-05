@@ -26,6 +26,9 @@ Created on the 3rd of March 2025.
 
 ## Data Structures:
 
+#### Trees:
+- `Binary Tree implementation` - Apr-05
+
 #### Hash maps:
 
 - `Unordered Map (C++)` - Mar-12
