@@ -19,20 +19,33 @@ class Tree {
         unique_ptr<Node> right;
     };
 public:
-    unique_ptr<Node> Root;
+    // The root node of the tree
+    unique_ptr<Node> root;
+    // The selected node of the tree
+    unique_ptr<Node> selected;
+
     // basic attributes:
     int size;
     int depth;
     
+    // Initialise the tree
     Tree(string rootData) {
-        Root = std::make_unique<Node>();
+        root = std::make_unique<Node>();
         size = 1;
         depth = 1;
+
+        root->data = rootData;
+        root->left = nullptr;
+        root->right = nullptr;
     }
+
+    // Add a left Node
 };
 
 int main() {
     Tree tree("Root of tree");
+
+    std::cout << tree.root->data;
 
     return 0;
 }
