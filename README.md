@@ -26,6 +26,9 @@ Created on the 3rd of March 2025.
 
 ## Data Structures:
 
+#### Graphs
+- `Adjacency Matrix implementation` - Apr-21
+
 #### Trees:
 - `Binary Tree implementation` - Apr-05
 

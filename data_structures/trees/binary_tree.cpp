@@ -10,7 +10,6 @@
 
 using std::string;
 using std::shared_ptr;
-using std::weak_ptr;
 
 // tree nodes with two branches:
 struct Node {
